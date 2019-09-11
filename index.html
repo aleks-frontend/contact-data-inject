@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact data inject - Proto</title>
+    <style>
+        .contact {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact__container"></div>
+    <script>
+        const teamName = 'Small Business'; // This will come from an input
+
+        function contactDataInject(teamName) {
+            // data will come from snippets
+            const data = {
+                "cols": [
+                    "City",
+                    "Name",
+                    "Phone",
+                    "Email"
+                ],
+                "data": [
+                    [
+                        "Seborga",
+                        "Holmes",
+                        "1-128-271-6342",
+                        "ornare.sagittis.felis@tortor.edu"
+                    ],
+                    [
+                        "Winchester",
+                        "Martha",
+                        "874-8037",
+                        "feugiat.Lorem@consectetuer.net"
+                    ],
+                    [
+                        "Sant'Egidio alla Vibrata",
+                        "Carla",
+                        "1-584-783-0040",
+                        "est.ac.mattis@sodalesatvelit.edu"
+                    ],
+                    [
+                        "Vijayawada",
+                        "Shelby",
+                        "1-243-978-8780",
+                        "et@duiquisaccumsan.org"
+                    ],
+                    [
+                        "Relegem",
+                        "Jonas",
+                        "511-3887",
+                        "euismod@utlacus.org"
+                    ],
+                    [
+                        "Brora",
+                        "Wendy",
+                        "131-5080",
+                        "Phasellus.libero.mauris@arcuacorci.org"
+                    ],
+                    [
+                        "Waarloos",
+                        "Kai",
+                        "1-502-791-3141",
+                        "pharetra.ut.pharetra@nibhPhasellusnulla.ca"
+                    ],
+                    [
+                        "Drongen",
+                        "Dai",
+                        "1-376-527-7235",
+                        "eget.ipsum.Suspendisse@Phasellusin.com"
+                    ],
+                    [
+                        "Eschwege",
+                        "Fleur",
+                        "957-7781",
+                        "ante.Vivamus@nulla.com"
+                    ],
+                    [
+                        "Fredericton",
+                        "Sage",
+                        "665-9807",
+                        "Phasellus.libero.mauris@estacmattis.com"
+                    ],
+                    [
+                        "Wodonga",
+                        "Abraham",
+                        "1-137-559-8917",
+                        "Duis.volutpat.nunc@semutcursus.co.uk"
+                    ],
+                    [
+                        "Racine",
+                        "Elvis",
+                        "1-132-376-1243",
+                        "Donec@dui.com"
+                    ],
+                    [
+                        "Priolo Gargallo",
+                        "Oprah",
+                        "253-4912",
+                        "Aenean.egestas.hendrerit@sedhendrerit.org"
+                    ],
+                    [
+                        "Purmerend",
+                        "Sade",
+                        "1-132-326-8093",
+                        "consectetuer@ullamcorper.co.uk"
+                    ],
+                    [
+                        "Quilicura",
+                        "Brady",
+                        "950-6900",
+                        "orci@magna.co.uk"
+                    ],
+                    [
+                        "Jalna",
+                        "Armand",
+                        "1-476-430-8489",
+                        "eu.ligula.Aenean@in.org"
+                    ],
+                    [
+                        "Narcao",
+                        "Anika",
+                        "1-114-447-7990",
+                        "sollicitudin.orci@maurisipsumporta.ca"
+                    ],
+                    [
+                        "Anghiari",
+                        "Thor",
+                        "587-9194",
+                        "ut@atpede.com"
+                    ],
+                    [
+                        "Barry",
+                        "Gary",
+                        "1-771-954-0773",
+                        "mus@egetdictumplacerat.com"
+                    ],
+                    [
+                        "Orilla",
+                        "Cynthia",
+                        "883-2974",
+                        "Sed.neque.Sed@urna.edu"
+                    ],
+                    [
+                        "Turriff",
+                        "Lani",
+                        "1-982-251-5241",
+                        "convallis@egetvolutpatornare.edu"
+                    ],
+                    [
+                        "Colorno",
+                        "Lydia",
+                        "1-713-766-6779",
+                        "Suspendisse.sagittis@lectusNullam.com"
+                    ],
+                    [
+                        "Telford",
+                        "Hannah",
+                        "1-484-896-4475",
+                        "posuere.vulputate@diam.co.uk"
+                    ],
+                    [
+                        "Turgutlu",
+                        "Eve",
+                        "1-133-515-5665",
+                        "senectus.et@Suspendissecommodotincidunt.edu"
+                    ],
+                    [
+                        "Bellevue",
+                        "Quintessa",
+                        "1-333-559-2759",
+                        "malesuada@sed.edu"
+                    ],
+                    [
+                        "Mont-sur-Marchienne",
+                        "Ethan",
+                        "872-4822",
+                        "nec.cursus.a@SuspendisseduiFusce.co.uk"
+                    ],
+                    [
+                        "Salvador",
+                        "Nola",
+                        "397-4931",
+                        "tempus.non.lacinia@nequeetnunc.co.uk"
+                    ],
+                    [
+                        "Sint-Joost-ten-Node",
+                        "Seth",
+                        "1-541-128-3668",
+                        "faucibus.orci@gravidamolestie.net"
+                    ],
+                    [
+                        "Sant'Angelo Limosano",
+                        "Malachi",
+                        "884-4479",
+                        "est@perconubia.net"
+                    ],
+                    [
+                        "Hulshout",
+                        "Jenna",
+                        "1-359-976-4371",
+                        "risus.odio.auctor@tortorInteger.co.uk"
+                    ],
+                    [
+                        "Balsas",
+                        "Caldwell",
+                        "431-8862",
+                        "pede.et@duiCraspellentesque.ca"
+                    ],
+                    [
+                        "Woutersbrakel",
+                        "Quail",
+                        "864-0086",
+                        "primis.in.faucibus@Nam.com"
+                    ],
+                    [
+                        "Lestizza",
+                        "Akeem",
+                        "326-4524",
+                        "nec.enim@risus.org"
+                    ],
+                    [
+                        "São José",
+                        "Zena",
+                        "1-420-641-0996",
+                        "dolor.Donec@orciluctus.org"
+                    ],
+                    [
+                        "Flawinne",
+                        "Russell",
+                        "1-701-924-6659",
+                        "Cras.eu.tellus@elitCurabitur.co.uk"
+                    ],
+                    [
+                        "Beypazarı",
+                        "Kyle",
+                        "713-0154",
+                        "Donec@urnaNuncquis.edu"
+                    ],
+                    [
+                        "Cantalupo in Sabina",
+                        "Driscoll",
+                        "1-464-291-0678",
+                        "cursus.Nunc@Sed.co.uk"
+                    ],
+                    [
+                        "Monghidoro",
+                        "Logan",
+                        "1-354-250-0143",
+                        "ut.pellentesque.eget@risusatfringilla.net"
+                    ],
+                    [
+                        "Campagna",
+                        "Samantha",
+                        "1-333-932-5412",
+                        "et.euismod.et@ligulaAenean.edu"
+                    ],
+                    [
+                        "Nives",
+                        "Tamara",
+                        "992-0938",
+                        "posuere@convallis.org"
+                    ],
+                    [
+                        "Sellano",
+                        "Mikayla",
+                        "323-7433",
+                        "Duis@cubiliaCurae.com"
+                    ],
+                    [
+                        "Vicuña",
+                        "Imani",
+                        "1-479-415-6601",
+                        "euismod.mauris.eu@purusgravida.org"
+                    ],
+                    [
+                        "Eisleben",
+                        "Allegra",
+                        "1-800-729-5112",
+                        "Fusce.dolor@magnamalesuadavel.edu"
+                    ],
+                    [
+                        "Harrisburg",
+                        "Nadine",
+                        "1-913-442-2886",
+                        "Donec.elementum.lorem@sem.edu"
+                    ],
+                    [
+                        "Noville",
+                        "Miranda",
+                        "1-893-921-3400",
+                        "velit@lacuspedesagittis.co.uk"
+                    ],
+                    [
+                        "BiercŽe",
+                        "Calvin",
+                        "472-3511",
+                        "Mauris.eu.turpis@anteblandit.com"
+                    ],
+                    [
+                        "Giove",
+                        "Basia",
+                        "103-2054",
+                        "pharetra.ut@anteNuncmauris.net"
+                    ],
+                    [
+                        "Gateshead",
+                        "Conan",
+                        "931-9316",
+                        "diam.Proin.dolor@semPellentesqueut.co.uk"
+                    ],
+                    [
+                        "Richmond Hill",
+                        "Boris",
+                        "117-4877",
+                        "mi.ac.mattis@eratvolutpat.ca"
+                    ],
+                    [
+                        "Sunset Point",
+                        "Lenore",
+                        "1-930-791-9899",
+                        "ac.urna@convallisconvallisdolor.ca"
+                    ],
+                    [
+                        "Rocourt",
+                        "Arsenio",
+                        "654-4772",
+                        "quis.turpis@faucibusleoin.co.uk"
+                    ],
+                    [
+                        "Ohain",
+                        "Ira",
+                        "845-4354",
+                        "mauris.Suspendisse.aliquet@accumsan.edu"
+                    ],
+                    [
+                        "Boise",
+                        "Giselle",
+                        "322-9444",
+                        "vitae.sodales.at@purus.net"
+                    ],
+                    [
+                        "Hillsboro",
+                        "Stephen",
+                        "1-549-730-8252",
+                        "dignissim@Proinvelnisl.co.uk"
+                    ],
+                    [
+                        "Strathcona County",
+                        "Rachel",
+                        "1-569-537-7875",
+                        "Aliquam@lectus.ca"
+                    ],
+                    [
+                        "Baie-Saint-Paul",
+                        "Jonas",
+                        "1-931-378-1202",
+                        "Etiam.gravida.molestie@enimmi.ca"
+                    ],
+                    [
+                        "Kontich",
+                        "Jamal",
+                        "1-979-788-3505",
+                        "sit@semper.org"
+                    ],
+                    [
+                        "Stilo",
+                        "Lara",
+                        "1-470-617-2447",
+                        "amet.metus.Aliquam@estmauris.com"
+                    ],
+                    [
+                        "Souvret",
+                        "Dakota",
+                        "1-949-547-1564",
+                        "orci.sem.eget@eu.com"
+                    ],
+                    [
+                        "San Giovanni Suergiu",
+                        "Colt",
+                        "1-111-983-2121",
+                        "eu@magnaNam.ca"
+                    ],
+                    [
+                        "Welshpool",
+                        "Donovan",
+                        "945-2624",
+                        "faucibus.ut.nulla@acrisusMorbi.ca"
+                    ],
+                    [
+                        "Sirsa",
+                        "Lee",
+                        "1-975-335-7697",
+                        "sit@a.co.uk"
+                    ],
+                    [
+                        "Heikruis",
+                        "Shaine",
+                        "1-475-738-1057",
+                        "arcu@eleifendegestas.com"
+                    ],
+                    [
+                        "Khammam",
+                        "Dai",
+                        "1-319-572-6606",
+                        "magna.Ut@laoreetlectusquis.edu"
+                    ],
+                    [
+                        "Montresta",
+                        "Castor",
+                        "1-195-955-1096",
+                        "Phasellus.in.felis@sodales.org"
+                    ],
+                    [
+                        "Reno",
+                        "Hyacinth",
+                        "702-5550",
+                        "lorem.lorem.luctus@egestasa.org"
+                    ],
+                    [
+                        "Fayetteville",
+                        "Eleanor",
+                        "1-401-514-3482",
+                        "id@atpede.com"
+                    ],
+                    [
+                        "Montigny-le-Tilleul",
+                        "Julian",
+                        "100-7209",
+                        "Integer@nunc.edu"
+                    ],
+                    [
+                        "Lake Cowichan",
+                        "Elvis",
+                        "415-6269",
+                        "Nunc.quis@lorem.edu"
+                    ],
+                    [
+                        "Lac La Biche County",
+                        "Dalton",
+                        "1-148-969-9527",
+                        "erat@Lorem.co.uk"
+                    ],
+                    [
+                        "Sant'Elia a Pianisi",
+                        "Stacy",
+                        "821-0040",
+                        "Quisque@eleifend.ca"
+                    ],
+                    [
+                        "Edmundston",
+                        "Gisela",
+                        "819-1151",
+                        "Sed.nunc@rutrumeu.net"
+                    ],
+                    [
+                        "Llandovery",
+                        "Selma",
+                        "947-3331",
+                        "aliquam.eu@arcu.co.uk"
+                    ],
+                    [
+                        "Turnhout",
+                        "Kane",
+                        "1-777-725-7923",
+                        "nec.enim@cubilia.net"
+                    ],
+                    [
+                        "Plauen",
+                        "Abra",
+                        "1-889-736-0999",
+                        "hendrerit@Donec.co.uk"
+                    ],
+                    [
+                        "Agen",
+                        "Cooper",
+                        "1-419-886-6955",
+                        "Curabitur@velitCraslorem.net"
+                    ],
+                    [
+                        "Geelong",
+                        "Winter",
+                        "457-2759",
+                        "egestas.urna.justo@hendreritid.co.uk"
+                    ],
+                    [
+                        "Vaulx-lez-Chimay",
+                        "Nathan",
+                        "410-1306",
+                        "luctus.et@elementum.net"
+                    ],
+                    [
+                        "Dingwall",
+                        "Derek",
+                        "1-756-556-6703",
+                        "non.lobortis@justoeuarcu.net"
+                    ],
+                    [
+                        "Santa María",
+                        "Jonas",
+                        "1-521-624-1644",
+                        "iaculis.aliquet@utcursusluctus.org"
+                    ],
+                    [
+                        "Wageningen",
+                        "Xenos",
+                        "128-9424",
+                        "nunc@purus.edu"
+                    ],
+                    [
+                        "Burcht",
+                        "Lucius",
+                        "837-9097",
+                        "tellus.imperdiet.non@nequesed.net"
+                    ],
+                    [
+                        "Dudley",
+                        "Prescott",
+                        "604-4466",
+                        "dui.Fusce@arcu.org"
+                    ],
+                    [
+                        "Osasco",
+                        "Unity",
+                        "1-364-105-9245",
+                        "lobortis@mauris.edu"
+                    ],
+                    [
+                        "Piringen",
+                        "Salvador",
+                        "299-6025",
+                        "in.felis@DonecnibhQuisque.edu"
+                    ],
+                    [
+                        "Saint Louis",
+                        "Leilani",
+                        "721-5524",
+                        "ac.nulla.In@estarcu.org"
+                    ],
+                    [
+                        "Precenicco",
+                        "Kaitlin",
+                        "1-785-462-9321",
+                        "at.pede.Cras@magnatellus.co.uk"
+                    ],
+                    [
+                        "Vegreville",
+                        "Ishmael",
+                        "230-1683",
+                        "lorem.fringilla.ornare@eu.net"
+                    ],
+                    [
+                        "Itajaí",
+                        "Chancellor",
+                        "684-5281",
+                        "tellus.lorem.eu@nibh.edu"
+                    ],
+                    [
+                        "Aklavik",
+                        "Ahmed",
+                        "1-499-298-0828",
+                        "sociis.natoque.penatibus@Vestibulumuteros.org"
+                    ],
+                    [
+                        "Delhi",
+                        "Nyssa",
+                        "767-1803",
+                        "velit@lobortisultricesVivamus.co.uk"
+                    ],
+                    [
+                        "Frankenthal",
+                        "David",
+                        "403-6189",
+                        "fermentum@adipiscingenimmi.net"
+                    ],
+                    [
+                        "Tonk",
+                        "Dominic",
+                        "1-737-624-4889",
+                        "mollis@Etiam.net"
+                    ],
+                    [
+                        "Saint-Médard-en-Jalles",
+                        "Rose",
+                        "944-6942",
+                        "gravida@utnisia.co.uk"
+                    ],
+                    [
+                        "Concepción",
+                        "Rogan",
+                        "813-4745",
+                        "lacus.varius.et@ipsumprimisin.org"
+                    ],
+                    [
+                        "Impe",
+                        "Ivory",
+                        "1-634-376-1369",
+                        "fringilla.cursus@Ut.net"
+                    ],
+                    [
+                        "Chennai",
+                        "Diana",
+                        "668-6578",
+                        "et.nunc.Quisque@molestie.com"
+                    ],
+                    [
+                        "Grand-Leez",
+                        "Benedict",
+                        "196-4320",
+                        "ipsum.leo.elementum@leoin.com"
+                    ],
+                    [
+                        "São João de Meriti",
+                        "Chiquita",
+                        "300-1984",
+                        "urna.et.arcu@duiCumsociis.ca"
+                    ],
+                    [
+                        "Airdrie",
+                        "Kessie",
+                        "1-279-288-3250",
+                        "dignissim@lorem.com"
+                    ]
+                ]
+            };
+
+            const teams = data.data;
+            
+            const container = document.querySelector('.contact__container');
+            container.innerHTML = teams.filter((team, index) => {
+                let range;
+
+                switch (teamName) {
+                    case 'Central Marketing':
+                        range = (index < 6);
+                        break;
+                    case 'Corporate':
+                        range = ( index > 5 && index < 12 );
+                        break;
+                    case 'Insurance':
+                        range = ( index > 11 && index < 16 );
+                        break;
+                    case 'Personal':
+                        range = ( index > 15 && index < 24 );
+                        break;
+                    case 'Small Business':
+                        range = ( index > 23 && index < 32 );
+                        break;
+                }
+
+                if ( range ) {
+                    return true;
+                }
+            }).map(team => {
+                const city = team[0];
+                const name = team[1];
+                const phone = team[2];
+                const email = team[3];
+
+                return `
+                    <div class="contact">
+                        <div>City: ${city}</div>
+                        <div>Name: ${name}</div>
+                        <div>Phone: ${phone}</div>
+                        <div>Email: ${email}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        contactDataInject(teamName);
+    </script>
+</body>
+</html>
