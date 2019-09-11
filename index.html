@@ -14,7 +14,7 @@
 <body>
     <div class="contact__container"></div>
     <script>
-        const teamName = 'Small Business'; // This will come from an input
+        const teamName = ''; // This will come from an input
 
         function contactDataInject(teamName) {
             // data will come from snippets
@@ -630,6 +630,7 @@
             };
 
             const teams = data.data;
+            const labels = data.cols;
             
             const container = document.querySelector('.contact__container');
             container.innerHTML = teams.filter((team, index) => {
@@ -637,7 +638,7 @@
 
                 switch (teamName) {
                     case 'Central Marketing':
-                        range = (index < 6);
+                        range = ( index < 6 );
                         break;
                     case 'Corporate':
                         range = ( index > 5 && index < 12 );
@@ -651,6 +652,8 @@
                     case 'Small Business':
                         range = ( index > 23 && index < 32 );
                         break;
+                    default:
+                        range = ( index < 6 );
                 }
 
                 if ( range ) {
@@ -664,10 +667,10 @@
 
                 return `
                     <div class="contact">
-                        <div>City: ${city}</div>
-                        <div>Name: ${name}</div>
-                        <div>Phone: ${phone}</div>
-                        <div>Email: ${email}</div>
+                        <div>${labels[0]}: ${city}</div>
+                        <div>${labels[1]}: ${name}</div>
+                        <div>${labels[2]}: ${phone}</div>
+                        <div>${labels[3]}: ${email}</div>
                     </div>
                 `;
             }).join('');
