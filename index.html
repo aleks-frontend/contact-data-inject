@@ -634,30 +634,19 @@
             
             const container = document.querySelector('.contact__container');
             container.innerHTML = teams.filter((team, index) => {
-                let range;
-
                 switch (teamName) {
                     case 'Central Marketing':
-                        range = ( index < 6 );
-                        break;
+                        return ( index < 6 );
                     case 'Corporate':
-                        range = ( index > 5 && index < 12 );
-                        break;
+                        return ( index > 5 && index < 12 );
                     case 'Insurance':
-                        range = ( index > 11 && index < 16 );
-                        break;
+                        return ( index > 11 && index < 16 );
                     case 'Personal':
-                        range = ( index > 15 && index < 24 );
-                        break;
+                        return ( index > 15 && index < 24 );
                     case 'Small Business':
-                        range = ( index > 23 && index < 32 );
-                        break;
+                        return ( index > 23 && index < 32 );
                     default:
-                        range = ( index < 6 );
-                }
-
-                if ( range ) {
-                    return true;
+                        return ( index < 6 );
                 }
             }).map(team => {
                 const city = team[0];
