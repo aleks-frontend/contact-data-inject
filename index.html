@@ -633,7 +633,7 @@
             const labels = data.cols;
             
             const container = document.querySelector('.contact__container');
-            container.innerHTML = (function(){
+            container.innerHTML = (() => {
                 switch (teamName) {
                     case 'Central Marketing':
                         return teams.slice(0, 6);
@@ -648,7 +648,7 @@
                     default:
                         return teams.slice(0, 6);
                 }
-            }()).map(team => {
+            })().map(team => {
                 const city = team[0];
                 const name = team[1];
                 const phone = team[2];
