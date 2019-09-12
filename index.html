@@ -633,22 +633,22 @@
             const labels = data.cols;
             
             const container = document.querySelector('.contact__container');
-            container.innerHTML = teams.filter((team, index) => {
+            container.innerHTML = (function(){
                 switch (teamName) {
                     case 'Central Marketing':
-                        return ( index < 6 );
+                        return teams.slice(0, 6);
                     case 'Corporate':
-                        return ( index > 5 && index < 12 );
+                        return teams.slice(6, 12);
                     case 'Insurance':
-                        return ( index > 11 && index < 16 );
+                        return teams.slice(12, 17);
                     case 'Personal':
-                        return ( index > 15 && index < 24 );
+                        return teams.slice(16, 24);
                     case 'Small Business':
-                        return ( index > 23 && index < 32 );
+                        return teams.slice(24, 32);
                     default:
-                        return ( index < 6 );
+                        return teams.slice(0, 6);
                 }
-            }).map(team => {
+            }()).map(team => {
                 const city = team[0];
                 const name = team[1];
                 const phone = team[2];
